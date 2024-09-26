@@ -1,0 +1,15 @@
+{% load static %}
+<nav class="navbar shadow mb-4 bg-dark border-bottom border-body" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url "shop" %}"><img src="{% static "image/logo.png" %}" alt=""></a>
+    <div class="navbar-nav">
+      <div class="d-flex align-itmes-center"> 
+        <a class="btn btn-light p-2" href="#">Login</a>
+        <a class="nav-link p-2 link-light" href="{% url "card" %}"><img src="{% static "image/floppy.png" %}" alt="">
+        <span class="badge rounded-pill bg-danger position-absolute top-25 start-25 translate-middle">3</span></a>
+      </div>
+    </div>
+  
+   
+  </div>
+</nav>

@@ -1,0 +1,84 @@
+{% extends "shop/index.html" %}
+
+<!--Kasse-->
+{% block content %}
+<div class="row mt-4">
+  <div class="col-4">
+    <div class="shadow p-4">
+      <h3>Bestellübersicht</h3>
+      <hr />
+      <div class="d-flex">
+        <p class="p-2">1</p>
+        <p class="me-auto p-2">Kopfhörer</p>
+        <p class="p-2">99€</p>
+      </div>
+      <hr />
+      <div class="d-flex">
+        <p class="me-auto p-2 fw-bold">Menge: 1</p>
+        <p class="p-2 fw-bold">Gesamtpreis: 99€</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-8">
+    <div class="shadow p-4">
+      <form class="row g-3">
+        <div class="col-md-6">
+          <label for="inputName" class="form-label">Name</label>
+          <input type="text" class="form-control" id="inputName" />
+        </div>
+        <div class="col-md-6">
+          <label for="inputEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail" />
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Addresse</label>
+          <input type="text" class="form-control" id="inputAddress" />
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">Stadt</label>
+          <input type="text" class="form-control" id="inputCity" />
+        </div>
+        <div class="col-md-6">
+          <label for="inputState" class="form-label">Bundesland</label>
+          <select id="inputState" class="form-select">
+            <option selected>...</option>
+            <option>Baden-Württemberg</option>
+            <option>Bayern</option>
+            <option>Berlin</option>
+            <option>Brandenburg</option>
+            <option>Bremen</option>
+            <option>Hamburg</option>
+            <option>Hessen</option>
+            <option>Mecklenburg-Vorpommern</option>
+            <option>Niedersachsen</option>
+            <option>Nordrhein-Westfalen</option>
+            <option>Rheinland-Pfalz</option>
+            <option>Saarland</option>
+            <option>Sachsen</option>
+            <option>Sachsen-Anhalt</option>
+            <option>Schleswig-Holstein</option>
+            <option>Thüringen</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="inputPLZ" class="form-label">Postleitzahl</label>
+          <input type="text" class="form-control" id="inputPLZ" />
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck" />
+            <label class="form-check-label" for="gridCheck">
+              Eingabe bestätigen
+            </label>
+          </div>
+        </div>
+        <div class="col-12 d-flex justify-content-end">
+          <button type="submit" class="btn btn-secondary" id="formular-btn">
+            weiter
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}
