@@ -1,12 +1,14 @@
 {% extends "shop/index.html" %} {% load static %}
 <!--Shopseite-->
 {% block content %}
-<div class="row row-cols-4">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
   {% for artikel in artikels %}
-  <div class="col-4 mb-3">
+  <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
     <div class="card" style="max-width: 25rem">
-      <img src="{% static "image/kopfhoerer.jpg" %}" class="card-img-top"
-      alt="..." />
+      {% if artikel.bild %}
+      <img src="{{artikel.bild.url}}" class="card-img-top" alt="..." />
+      {% else %} <img src={%static 'image/dummy.jpg'%} class="card-img-top"
+      alt="..." /> {% endif %}
       <div class="card-body">
         <h5 class="card-title">{{ artikel.name }}</h5>
         <p class="card-text">{{ artikel.beschreibung }}</p>
